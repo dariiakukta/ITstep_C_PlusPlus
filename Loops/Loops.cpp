@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int a, sum = 0;
+    int a;
     cout << "Enter a: ";
     cin >> a;
 
@@ -131,7 +131,7 @@ int main() {
     do {
         if (A % i == 0) {
             cout << i << endl;
-    }
+        }
         i++;
     } while (i <= A);
 
@@ -142,7 +142,7 @@ int main() {
     do {
         if (num1 % i == 0 && num2 % i == 0) {
             cout << i << endl;
-    }
+        }
         i++;
     } while (i <= num1 && i <= num2);
 }
