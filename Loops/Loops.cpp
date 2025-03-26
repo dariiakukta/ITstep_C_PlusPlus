@@ -5,113 +5,146 @@ int main() {
     int a, sum = 0;
     cout << "Enter a: ";
     cin >> a;
-    for (int i = a; i <= 500; i++) {
+
+    do {
+        cout << "Enter a valid number: ";
+        cin >> a;
+    } while (a < 0 || a > 500);
+
+    int sum = 0, i = a;
+    while (i <= 500) {
         sum += i;
+        i++;
     }
     cout << sum << endl;
 
-    int x, y, result = 1;
-    cout << "Enter x: ";
-    cin >> x;
-    cout << "Enter y: ";
-    cin >> y;
-    for (int i = 0; i < y; i++) {
-        result *= x;
-    }
-    cout << result << endl;
+    int x, y;
+    cout << "Enter x and y: ";
+    cin >> x >> y;
+    int power = 1, j = 0;
+    do {
+        power *= x;
+        j++;
+    } while (j < y);
+    cout << power << endl;
 
     sum = 0;
-    for (int i = 1; i <= 1000; i++) {
+    i = 1;
+    do {
         sum += i;
-    }
-    cout << sum / 1000 << endl;
+        i++;
+    } while (i <= 1000);
+    cout << sum / 1000.0 << endl;
 
-    int product = 1;
     cout << "Enter a: ";
     cin >> a;
-    for (int i = a; i <= 20; i++) {
+    do {
+        cout << "Enter a valid number: ";
+        cin >> a;
+    } while (a < 1 || a > 20);
+
+    int product = 1;
+    i = a;
+    while (i <= 20) {
         product *= i;
+        i++;
     }
     cout << product << endl;
 
     int k;
     cout << "Enter k: ";
     cin >> k;
-    for (int i = 2; i <= 10; i++) {
+    i = 2;
+    do {
         cout << k << " x " << i << " = " << k * i << endl;
-    }
+        i++;
+    } while (i <= 10);
 
-    int countSame = 0;
-    for (int i = 100; i <= 999; i++) {
-        int d1 = i / 100, d2 = (i / 10) % 10, d3 = i % 10;
-        if (d1 == d2 || d1 == d3 || d2 == d3) {
-            countSame++;
+    int count = 0;
+    i = 100;
+    do {
+        int digit1 = i / 100;
+        int digit2 = (i / 10) % 10;
+        int digit3 = i % 10;
+        if (digit1 == digit2 || digit2 == digit3 || digit1 == digit3) {
+            count++;
         }
-    }
-    cout << countSame << endl;
+        i++;
+    } while (i <= 999);
+    cout << count << endl;
 
-    int countDifferent = 0;
-    for (int i = 100; i <= 999; i++) {
-        int d1 = i / 100, d2 = (i / 10) % 10, d3 = i % 10;
-        if (d1 != d2 && d1 != d3 && d2 != d3) {
-            countDifferent++;
+    count = 0;
+    i = 100;
+    do {
+        int digit1 = i / 100;
+        int digit2 = (i / 10) % 10;
+        int digit3 = i % 10;
+        if (digit1 != digit2 && digit2 != digit3 && digit1 != digit3) {
+            count++;
         }
-    }
-    cout << countDifferent << endl;
+        i++;
+    } while (i <= 999);
+    cout << count << endl;
 
-    int num, newNum = 0, place = 1;
-    cout << "Enter number: ";
+    int num;
+    cout << "Enter a number: ";
     cin >> num;
-    while (num > 0) {
+    int result = 0, place = 1;
+    do {
         int digit = num % 10;
         if (digit != 3 && digit != 6) {
-            newNum += digit * place;
+            result += digit * place;
             place *= 10;
         }
         num /= 10;
-    }
-    cout << newNum << endl;
+    } while (num > 0);
+    cout << result << endl;
 
+    int A;
     cout << "Enter A: ";
-    cin >> a;
-    for (int b = 1; b * b <= a; b++) {
-        if (a % (b * b) == 0 && a % (b * b * b) != 0) {
-            cout << b << " ";
+    cin >> A;
+    int B = 1;
+    do {
+        if (A % (B * B) == 0 && A % (B * B * B) != 0) {
+            cout << B << endl;
         }
-    }
-    cout << endl;
+        B++;
+    } while (B <= A);
 
     cout << "Enter A: ";
-    cin >> a;
-    int sumDigits = 0, temp = a;
-    while (temp > 0) {
-        sumDigits += temp % 10;
+    cin >> A;
+    int sumOfDigits = 0, temp = A;
+    do {
+        sumOfDigits += temp % 10;
         temp /= 10;
-    }
-    if (sumDigits * sumDigits * sumDigits == a * a) {
-        cout << "YES\n";
+    } while (temp > 0);
+    if (sumOfDigits * sumOfDigits * sumOfDigits == A * A) {
+        cout << "Yes" << endl;
     }
     else {
-        cout << "NO\n";
+        cout << "No" << endl;
     }
 
-    cout << "Enter number: ";
-    cin >> num;
-    for (int i = 1; i <= num; i++) {
-        if (num % i == 0) {
-            cout << i << " ";
-        }
+    cout << "Enter A: ";
+    cin >> A;
+    i = 1;
+    do {
+        if (A % i == 0) {
+            cout << i << endl;
     }
-    cout << endl;
+        i++;
+    } while (i <= A);
 
-    int num2;
+    int num1, num2;
     cout << "Enter two numbers: ";
-    cin >> num >> num2;
-    for (int i = 1; i <= min(num, num2); i++) {
-        if (num % i == 0 && num2 % i == 0) {
-            cout << i << " ";
-        }
+    cin >> num1 >> num2;
+    i = 1;
+    do {
+        if (num1 % i == 0 && num2 % i == 0) {
+            cout << i << endl;
     }
-    cout << endl;
+        i++;
+    } while (i <= num1 && i <= num2);
 }
+
 
