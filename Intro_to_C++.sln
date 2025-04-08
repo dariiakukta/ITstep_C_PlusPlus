@@ -21,6 +21,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Functions", "Functions\Func
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tasks", "Tasks\Tasks.vcxproj", "{DAF88648-18D3-4E36-8D36-BF211AC17787}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Algoritmu", "Algoritmu\Algoritmu.vcxproj", "{5CBC4539-1DB5-41AF-BE50-8BF632A6D949}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -101,6 +103,14 @@ Global
 		{DAF88648-18D3-4E36-8D36-BF211AC17787}.Release|x64.Build.0 = Release|x64
 		{DAF88648-18D3-4E36-8D36-BF211AC17787}.Release|x86.ActiveCfg = Release|Win32
 		{DAF88648-18D3-4E36-8D36-BF211AC17787}.Release|x86.Build.0 = Release|Win32
+		{5CBC4539-1DB5-41AF-BE50-8BF632A6D949}.Debug|x64.ActiveCfg = Debug|x64
+		{5CBC4539-1DB5-41AF-BE50-8BF632A6D949}.Debug|x64.Build.0 = Debug|x64
+		{5CBC4539-1DB5-41AF-BE50-8BF632A6D949}.Debug|x86.ActiveCfg = Debug|Win32
+		{5CBC4539-1DB5-41AF-BE50-8BF632A6D949}.Debug|x86.Build.0 = Debug|Win32
+		{5CBC4539-1DB5-41AF-BE50-8BF632A6D949}.Release|x64.ActiveCfg = Release|x64
+		{5CBC4539-1DB5-41AF-BE50-8BF632A6D949}.Release|x64.Build.0 = Release|x64
+		{5CBC4539-1DB5-41AF-BE50-8BF632A6D949}.Release|x86.ActiveCfg = Release|Win32
+		{5CBC4539-1DB5-41AF-BE50-8BF632A6D949}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
